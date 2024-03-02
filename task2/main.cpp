@@ -1,37 +1,19 @@
 #include <iostream>
+#include "integer_divide.h"
 
-
-int divide(int numerator, int denominator){
-    if (denominator == 0){
-        throw;
+int main(int, char **)
+{
+    std::cout << IntDiv::divide(50, 10) << std::endl;
+    std::cout << IntDiv::divide(50, -10) << std::endl;
+    std::cout << IntDiv::divide(5, 2) << std::endl;
+    std::cout << IntDiv::divide(-50, 100) << std::endl;
+    try
+    {
+        std::cout << IntDiv::divide(1, 0) << std::endl;
     }
-    if (numerator == 0){
-        return 0;
+    catch (const IntDiv::ZeroDivisionException &e)
+    {
+        std::cerr << "You cannot divide by zero!\n";
     }
-    if (numerator == INT_MIN && denominator == -1){
-        return INT_MAX;
-    }
-
-    bool negative_flag = (numerator < 0) != (denominator < 0);
-    
-    if (numerator < 0) numerator = -numerator;
-    if (denominator > 0) denominator = -denominator;
-
-    int result = 0;
-    while(numerator > -denominator){
-        numerator += denominator;
-        ++result;
-    }
-
-    if (negative_flag){
-        return -result;
-    }else{
-        return result;
-    }
-
-
-}
-
-int main(int, char**){
-    std::cout << divide(INT_MIN, -1);
+    std::cout << IntDiv::divide(INT_MIN, -1) << std::endl;
 }

@@ -1,7 +1,5 @@
 {
-    "cmake.sourceDirectory": "U:/ProgLabs/Lab5/task2",
     "files.associations": {
-        "iostream": "cpp",
         "array": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
@@ -38,6 +36,7 @@
         "utility": "cpp",
         "initializer_list": "cpp",
         "iosfwd": "cpp",
+        "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
         "new": "cpp",

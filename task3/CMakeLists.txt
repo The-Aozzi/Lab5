@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(Lab5.2 VERSION 0.1.0 LANGUAGES C CXX)
+project(Lab5.3 VERSION 0.1.0 LANGUAGES C CXX)
 
 include(CTest)
 enable_testing()
 
-add_executable(Lab5.2 main.cpp integer_divide.cpp)
+add_executable(Lab5.3 main.cpp functions.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
